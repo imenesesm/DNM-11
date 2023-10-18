@@ -114,22 +114,22 @@
                         <!-- Primer comentario-->
                         <div class="card mb-4 shadow-sm">
                             <div class="card-body p-4">
-                                <p class="mb-1">😁 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id ipsum at est venenatis vulputate et eu nibh. Curabitur quis orci in tellus tempus semper.</p>
-                                <div class="small text-muted text-end">— Nombre de quien lo dice</div>
+                                <p class="mb-1">😁 Excelente trabajo, diseñame mi próxima gira</p>
+                                <div class="small text-muted text-end">— Karol G</div>
                             </div>
                         </div>
                         <!-- Segundo comentario-->
                         <div class="card mb-4 shadow-sm">
                             <div class="card-body p-4">
-                                <p class="mb-1">🤯 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id ipsum at est venenatis vulputate et eu nibh. Curabitur quis orci in tellus tempus semper.</p>
-                                <div class="small text-muted text-end">— Nombre de quien lo dice</div>
+                                <p class="mb-1">🤯 INCREIBLE </p>
+                                <div class="small text-muted text-end">— Bad Bunny</div>
                             </div>
                         </div>
                         <!-- Tercer comentario-->
                         <div class="card mb-4 shadow-sm">
                             <div class="card-body p-4">
-                                <p class="mb-1">😌 10/10. Súbanle el sueldo.</p>
-                                <div class="small text-muted text-end">— María.</div>
+                                <p class="mb-1">😌 10/10. Súbanle el sueldo pa que facture</p>
+                                <div class="small text-muted text-end">— Shakira</div>
                             </div>
                         </div>
                         <!-- Listo, no más comentarios-->
@@ -183,19 +183,11 @@
                 var donde = document.querySelector("#trabajos");
                 data.forEach(function (t, i) {
                     donde.innerHTML +=
-                        '<article class="col"><div class="card h-100 shadow-sm ' +
-                        t.soporte +
-                        '"><img src="' +
-                        t.fotos[0] +
-                        '" class="card-img-top"><div class="card-body"><h3 class="fs-5"><a href="single.html?nro=' +
-                        i +
-                        '" class="link-secondary">' +
-                        t.nombre +
-                        "</a></h3><p>" +
-                        t.abstract +
-                        "</p><small>#" +
-                        t.soporte +
-                        "</small></div></div></article>";
+                        `<article class="col"><div class="card h-100 shadow-sm ${t.soporte}"><img src="${t.fotos[0]}" class="card-img-top"><div class="card-body"><h3 class="fs-5"><a href="single.html?nro=${i}" class="link-secondary">${t.nombre}</a></h3><p>${t.abstract}</p><small>#${t.soporte}</small></div></div></article>`;
+        }); 
+    }
+    portfolio().catch((error) => console.error(error));
+</script>
                 });
             }
             portfolio().catch((error) => console.error(error));
